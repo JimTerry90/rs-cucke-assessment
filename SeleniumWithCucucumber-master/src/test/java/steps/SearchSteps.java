@@ -27,10 +27,6 @@ public class SearchSteps extends BaseUtil{
     }
 
 
-    /*
-    My tests steps start
-     */
-
     @Given("^I browse to the website$")
     public void iBrowseToTheWebsite() throws Throwable {
         base.Driver.get("https://uk.rs-online.com/web/");
@@ -52,6 +48,8 @@ public class SearchSteps extends BaseUtil{
 
     @Then("^I should see relevant product \"([^\"]*)\"$")
     public void iShouldSeeRelevantProductResults(String result) throws Throwable {
+
+        //Confirm the page title contains the relevant product as per search term
         Assert.assertTrue(base.Driver
                 .getTitle()
                 .contains(result)

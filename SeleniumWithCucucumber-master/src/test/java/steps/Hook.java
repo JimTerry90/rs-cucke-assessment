@@ -18,10 +18,13 @@ public class Hook extends BaseUtil{
 
     private BaseUtil base;
 
+    //create an object of the class
     public Hook(BaseUtil base) {
         this.base = base;
     }
 
+
+    //assign the browser and init the session (switching browsers may cause mvn dependency issues)
     @Before
     public void InitializeTest() {
 
@@ -50,10 +53,11 @@ public class Hook extends BaseUtil{
     }
 
 
+    //kill the browser session when the test is complete
     @After
     public void TearDownTest(Scenario scenario) {
         if (scenario.isFailed()) {
-            //Take screenshot logic goes here
+            //TO-DO Take screenshot logic goes here
             System.out.println(scenario.getName());
         }
         base.Driver.quit();

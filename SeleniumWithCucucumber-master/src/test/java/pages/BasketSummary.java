@@ -11,15 +11,17 @@ import org.openqa.selenium.support.PageFactory;
  */
 public class BasketSummary {
 
+
+    //create object of class
     public BasketSummary(WebDriver driver) {PageFactory.initElements(driver, this);}
 
 
-
+    //find the securely checkout button on the basket summary
     @FindBy(how = How.ID, using = "checkoutSecurelyAndPuchBtn")
     public WebElement secureCheckout;
 
 
-
+    //click on the securely checkout button from the basket summary
     public void clickSecureCheckout(){
         secureCheckout.click();
     }

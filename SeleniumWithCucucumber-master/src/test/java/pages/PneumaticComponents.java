@@ -11,14 +11,16 @@ import org.openqa.selenium.support.PageFactory;
  */
 public class PneumaticComponents {
 
+    //create an object of the class
     public PneumaticComponents(WebDriver driver) {PageFactory.initElements(driver, this);}
 
+    //find the add button for the first new pneumatic component
     @FindBy(how = How.XPATH, using = "//*[@id=\"search-results\"]/div[3]/div/div[2]/div[4]/div[3]/div/div[1]/div/div[2]/form/button")
     public WebElement addPneuProd1;
 
 
 
-
+    //click the add button for the first new pneumatic component
     public void clickAddPneuProd1(){
         addPneuProd1.click();
     }

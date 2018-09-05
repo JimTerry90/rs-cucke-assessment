@@ -11,12 +11,14 @@ import org.openqa.selenium.support.PageFactory;
  */
 public class NewProducts {
 
-
+    //create an object of the class
     public NewProducts(WebDriver driver) {PageFactory.initElements(driver, this); }
 
+    //find the pneumatic components category from the new products page
     @FindBy(how = How.XPATH, using = "//*[@id=\'featprd-id-1\']/div/div[1]/div/div[1]/div/h2/a")
     public WebElement pneuComp;
 
+    //find the diagnostic videoscopes category from the new products page
     @FindBy(how = How.XPATH, using = "//*[@id=\'featprd-id-1\']/div/div[2]/div/div[1]/div/h2/a")
     public WebElement videoScopes;
 
@@ -24,7 +26,7 @@ public class NewProducts {
 
 
 
-    //reuse for many product categories
+    //reusable function for clicking any product category
     public void selectCategory(WebElement myElement){
         myElement.click();
 

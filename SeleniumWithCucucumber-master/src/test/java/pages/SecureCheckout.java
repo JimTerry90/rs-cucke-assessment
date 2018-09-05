@@ -11,12 +11,14 @@ import org.openqa.selenium.support.PageFactory;
  */
 public class SecureCheckout {
 
+    //create an object of the class
     public SecureCheckout(WebDriver driver) {PageFactory.initElements(driver, this);}
 
+    //find the guest checkout button
     @FindBy(how = How.ID, using = "guestCheckoutForm:guestCheckout")
     public WebElement guestCheckoutBtn;
 
-
+    //check to see if the guest checkout button is displayed
     public boolean isGuestCheckout(){
 
         return guestCheckoutBtn.isDisplayed();
