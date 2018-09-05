@@ -5,9 +5,9 @@ Feature: Product Search
     Given I browse to the website
     When I enter a valid search <term>
     And I click the submit button
-    Then I should see relevant product results
+    Then I should see relevant product <results>
     Examples:
-      | term          |
-      | "Rasberry PI" |
-      | "Resistor"    |
-      | "Radio"       |
+      | term           | results       |
+      | "Raspberry Pi" | "Raspberry Pi"|
+      | "Resistor"     | "Resistor"    |
+      | "Radio"        | "Radio"       |

@@ -16,7 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Karthik on 10/15/2016.
+ * Created by James Fairclough 04/09/18
  */
 public class SearchSteps extends BaseUtil{
 
@@ -50,9 +50,12 @@ public class SearchSteps extends BaseUtil{
         homepage.searchSubmit();
     }
 
-    @Then("^I should see relevant product results$")
-    public void iShouldSeeRelevantProductResults() throws Throwable {
-        Thread.sleep(5000);
+    @Then("^I should see relevant product \"([^\"]*)\"$")
+    public void iShouldSeeRelevantProductResults(String result) throws Throwable {
+        Assert.assertTrue(base.Driver
+                .getTitle()
+                .contains(result)
+        );
 
         System.out.println("results found");
     }

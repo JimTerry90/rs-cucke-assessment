@@ -21,6 +21,9 @@ public class Home {
     @FindBy(how = How.ID, using = "btnSearch")
     public WebElement searchSubmit;
 
+    @FindBy(how = How.CLASS_NAME, using = "newProducts")
+    public WebElement newProducts;
+
 
     public void searchInput(String searchValue){
         searchField.sendKeys(searchValue);
@@ -30,5 +33,7 @@ public class Home {
     public void searchSubmit() {
         searchSubmit.submit();
     }
+
+    public void clickNewProducts() {newProducts.click();}
 
 }
