@@ -11,12 +11,14 @@ import org.openqa.selenium.support.PageFactory;
  */
 public class Common {
 
+    //create an object of the class
     public Common(WebDriver driver) {PageFactory.initElements(driver, this);}
 
+    //find the basket icon by the image classname
     @FindBy(how = How.CLASS_NAME, using = "shBasket")
     public WebElement basket;
 
-
+    //click on the basket icon
     public void goToBasket(){
         basket.click();
     }

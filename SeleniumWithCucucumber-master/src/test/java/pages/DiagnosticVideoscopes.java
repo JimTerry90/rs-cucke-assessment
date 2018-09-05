@@ -11,14 +11,15 @@ import org.openqa.selenium.support.PageFactory;
  */
 public class DiagnosticVideoscopes {
 
+    //create an object of the class
     public DiagnosticVideoscopes(WebDriver driver) {PageFactory.initElements(driver, this);}
 
+    //find the add button for the first new diagnostic videoscope product
     @FindBy(how = How.XPATH, using = "//*[@id=\'search-results\']/div[3]/div/div[2]/div[4]/div[3]/div/div[1]/div/div[2]/form/button")
     public WebElement addDiagScopeProd1;
 
 
-
-
+    //click on the first new diagnostic videoscope product
     public void clickDiagScopeProd1(){
         addDiagScopeProd1.click();
     }
