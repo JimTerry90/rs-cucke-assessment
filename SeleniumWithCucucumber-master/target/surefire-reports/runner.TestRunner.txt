@@ -1,0 +1,9 @@
+-------------------------------------------------------------------------------
+Test set: runner.TestRunner
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 1.301 sec <<< FAILURE! - in runner.TestRunner
+feature(runner.TestRunner)  Time elapsed: 0.196 sec  <<< FAILURE!
+cucumber.runtime.CucumberException: java.lang.NoClassDefFoundError: org/openqa/selenium/MutableCapabilities
+Caused by: java.lang.NoClassDefFoundError: org/openqa/selenium/MutableCapabilities
+Caused by: java.lang.ClassNotFoundException: org.openqa.selenium.MutableCapabilities
+
