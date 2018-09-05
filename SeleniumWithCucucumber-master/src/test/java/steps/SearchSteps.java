@@ -10,7 +10,7 @@ import cucumber.api.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import pages.Home;
-import pages.LoginPage;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,40 +26,6 @@ public class SearchSteps extends BaseUtil{
         this.base = base;
     }
 
-
-
-    @Then("^I should see the userform page$")
-    public void iShouldSeeTheUserformPage() throws Throwable {
-
-        Assert.assertEquals("Its not displayed", base.Driver.findElement(By.id("Initial")).isDisplayed(), true);
-    }
-
-    @Given("^I navigate to the login page$")
-    public void iNavigateToTheLoginPage() throws Throwable {
-
-        System.out.println("Navigate Login Page");
-        base.Driver.navigate().to("http://www.executeautomation.com/demosite/Login.html");
-    }
-
-
-    @And("^I click login button$")
-    public void iClickLoginButton() throws Throwable {
-        LoginPage page = new LoginPage(base.Driver);
-        page.ClickLogin();
-    }
-
-
-    @And("^I enter ([^\"]*) and ([^\"]*)$")
-    public void iEnterUsernameAndPassword(String userName, String password) throws Throwable {
-        System.out.println("UserName is : " + userName);
-        System.out.println("Password is : " + password);
-    }
-
-    @Then("^I should see the userform page wrongly$")
-    public void iShouldSeeTheUserformPageWrongly() throws Throwable {
-
-        Assert.assertEquals("Its not displayed", base.Driver.findElement(By.id("sdfgdsfsd")).isDisplayed(), true);
-    }
 
     /*
     My tests steps start
